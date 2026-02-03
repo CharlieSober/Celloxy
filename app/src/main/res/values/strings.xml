@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Celloxy</string>
+    <string name="start_strobe">Start Strobe</string>
+    <string name="stop_strobe">Stop Strobe</string>
+    <string name="capture_photo">Capture Photo</string>
+    <string name="captured_photo">Captured Photo</string>
+    <string name="permission_denied">Camera and Flashlight permissions are required</string>
+    <string name="no_flash">Device does not have a flash</string>
+    <string name="camera_error">Camera error occurred</string>
+    <string name="photo_captured">Photo captured successfully</string>
+</resources>
