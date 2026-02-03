@@ -34,7 +34,9 @@ class MainActivity : AppCompatActivity() {
     companion object {
         private const val TAG = "MainActivity"
         private const val CAMERA_PERMISSION_REQUEST = 1001
-        private const val STROBE_INTERVAL_MS = 16L // 16.66ms ≈ 16ms (close approximation)
+        // Target is 16.66ms (60 Hz), but we use 16ms as Handler.postDelayed() accepts long integers
+        // This results in ~62.5 Hz, approximately 4% faster than the target
+        private const val STROBE_INTERVAL_MS = 16L
     }
 
     // UI elements

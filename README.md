@@ -185,9 +185,11 @@ Celloxy/
 - This ensures strobe continues uninterrupted during photo capture
 
 ### Timing Precision
-- Target: 16.66ms (60 Hz)
-- Implementation: 16ms (close approximation)
-- Actual precision depends on device scheduler and system load
+- **Target**: 16.66ms (60 Hz strobe frequency)
+- **Implementation**: 16ms intervals
+- **Actual Frequency**: ~62.5 Hz (approximately 4% faster than target)
+- **Note**: The 16ms interval is used instead of 16.66ms because Handler.postDelayed() accepts long integers. This results in a slightly faster strobe rate. The difference is minimal and acceptable for most use cases.
+- **Precision depends on**: Device scheduler, system load, and Android's message queue processing
 
 ### Thread Safety
 - All camera operations on dedicated background thread
